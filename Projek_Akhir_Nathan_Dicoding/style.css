@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.images {
+  width: 1.5em;
+  background-color: white;
+  border-radius: 100%;
+}
+.nav-menu li {
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  background-color: #262626;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+}
+
+.nav-menu {
+  margin-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+  line-height: 2px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  font-weight: 500;
+  font-size: large;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin: 0;
+    line-height: 2em;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Main */
+/* Main */
+/* Main */
+
+.pengenalan {
+  padding: 20px;
+  overflow: auto;
+}
+
+.pengenalan h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+  color: #444444;
+}
+
+.pianis {
+  width: 100%;
+}
+
+.piano {
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .i {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pianis {
+    width: 40%;
+    margin-right: 100px;
+    margin-left: 10px;
+  }
+
+  /* .piano {
+    width: 50%;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+  }  */
+  .pengenalan .i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pengenalan .j {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 120px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+  }
+}
+
+.piano h2 {
+  color: #444444;
+}
+
+.pengenalan .j {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 120px;
+  border-radius: 20px;
+}
+
+.quotes {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+/* frederic */
+/* frederic */
+/* frederic */
+
+.frederic {
+  margin-top: 50px;
+}
+
+.frederic .h {
+  width: 100%;
+  text-align: center;
+  color: #444444;
+}
+
+.teks {
+  line-height: 25px;
+  max-height: calc(25px * 3);
+  overflow: hidden;
+  font-size: large;
+}
+
+.frederic-img {
+  width: 100%;
+}
+
+.button-readmore::after {
+  content: "Lanjut Baca";
+}
+
+.button-readmore {
+  padding: 5px 10px;
+  background: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-readmore:hover {
+  background: #ccc;
+}
+
+#check-readmore:checked ~ .button-readmore::after {
+  content: "Tutup";
+}
+
+#check-readmore:checked ~ .teks {
+  max-height: 100vh;
+}
+
+#check-readmore {
+  position: absolute;
+  left: -100px;
+}
+
+@media (min-width: 1000px) {
+  .frederic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .frederic-img {
+    width: 40%;
+  }
+
+  .frederic .h {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+/* bethoven */
+/* bethoven */
+/* bethoven */
+
+.bethoven {
+  margin-top: 70px;
+}
+
+.bethoven .q {
+  width: 100%;
+  text-align: center;
+  color: #444444;
+}
+
+.bethoven-img {
+  width: 100%;
+}
+
+.teks2 {
+  line-height: 25px;
+  max-height: calc(25px * 3);
+  overflow: hidden;
+  font-size: large;
+}
+
+.button-readmore2::after {
+  content: "Lanjut Baca";
+}
+
+.button-readmore2 {
+  padding: 5px 10px;
+  background: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-readmore2:hover {
+  background: #ccc;
+}
+
+#check-readmore2:checked ~ .button-readmore2::after {
+  content: "Tutup";
+}
+
+#check-readmore2:checked ~ .teks2 {
+  max-height: 100vh;
+}
+
+#check-readmore2 {
+  position: absolute;
+  left: -100px;
+}
+
+@media (min-width: 1000px) {
+  .bethoven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .bethoven-img {
+    width: 40%;
+  }
+
+  .bethoven .q {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+/* Mozart */
+/* Mozart */
+/* Mozart */
+
+.mozart {
+  margin-top: 50px;
+}
+
+.mozart .y {
+  width: 100%;
+  text-align: center;
+  color: #444444;
+}
+
+.teks3 {
+  line-height: 25px;
+  max-height: calc(25px * 3);
+  overflow: hidden;
+  font-size: large;
+}
+
+.mozart-img {
+  width: 100%;
+}
+
+.button-readmore3::after {
+  content: "Lanjut Baca";
+}
+
+.button-readmore3 {
+  padding: 5px 10px;
+  background: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-readmore3:hover {
+  background: #ccc;
+}
+
+#check-readmore3:checked ~ .button-readmore3::after {
+  content: "Tutup";
+}
+
+#check-readmore3:checked ~ .teks3 {
+  max-height: 100vh;
+}
+
+#check-readmore3 {
+  position: absolute;
+  left: -100px;
+}
+
+@media (min-width: 1000px) {
+  .mozart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .mozart-img {
+    width: 40%;
+  }
+
+  .mozart .y {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+/* aside */
+/* aside */
+/* aside */
+
+.biodata {
+  text-align: center;
+  color: #eaf2f4;
+  font-size: 2em;
+}
+
+hr {
+  margin-bottom: 100px;
+  width: 50%;
+}
+
+aside {
+  background-color: #f79327e6;
+  margin-top: 100px;
+  padding-top: 60px;
+  height: 900px;
+}
+
+.container {
+  max-height: 700px;
+}
+
+figure {
+  flex-basis: 33.33%;
+  margin-right: 19px;
+}
+
+.bio {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.full-bio {
+  flex-basis: 33.33%;
+  text-align: center;
+  line-height: 18px;
+  background-color: #eaf2f4;
+  border-radius: 5px;
+  padding-top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.sosmed {
+  flex-basis: 33.3%;
+  background-color: #eaf2f4;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.fb-ig-lin {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+.sosmed-f {
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.sosmed p {
+  margin-bottom: 70px;
+  font-size: large;
+  font-weight: 800;
+}
+
+.sosmed-f i {
+  align-content: flex-start;
+}
+
+.sosmed-f a {
+  text-decoration: none;
+}
+
+.sosmed .face:hover {
+  background-color: rgb(66, 66, 255);
+}
+.sosmed .ig:hover {
+  background-color: rgb(255, 66, 154);
+}
+.sosmed .linkin:hover {
+  background-color: rgb(63, 220, 255);
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 700px;
+  }
+}
+
+@media (max-width: 900px) {
+  aside {
+    height: 1600px;
+  }
+
+  .full-bio {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  figure {
+    margin-left: -10px;
+    margin-right: 0;
+  }
+
+  .sosmed {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 700px) and (max-width: 950px) {
+  aside {
+    height: 2000px;
+  }
+}
+
+/* footer */
+/* footer */
+/* footer */
+
+footer {
+  padding: 20px;
+  color: #ccc;
+  background-color: #444444;
+  text-align: center;
+  font-weight: bold;
+}
